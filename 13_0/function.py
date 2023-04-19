@@ -15,7 +15,6 @@ def get_currency_rate(currency: str) -> float:
 
     response = requests.get(url, headers={'apikey': API_KEY})
     # print(response.json())
-    print(response.currency)
     response_data = json.loads(response.text)
     rate = response_data['rates']['RUB']
     return rate
