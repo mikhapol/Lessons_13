@@ -7,6 +7,7 @@ class Employee:
 emp_1 = Employee()
 emp_2 = Employee()
 
+
 # Выведем в консоль информацию и убедимся, что объекты уникальны
 print(emp_1)
 print(emp_2)
