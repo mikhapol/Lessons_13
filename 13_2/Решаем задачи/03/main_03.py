@@ -3,25 +3,25 @@ from datetime import date
 
 class Person:
     def __init__(self, name, age):
-        self.__name = name
+        self.__name = name.title()
         self.__age = age
 
     @property  # getter
     def person_name(self):
         return self.__name
 
-    @property  # getter
-    def person_age(self):
-        return self.__age
-
-    @person_name.setter
+    @person_name.setter  # setter
     def person_name(self, name):
         if isinstance(name, str) and name.isalpha():
             self.__name = name
         else:
             print('Имя некорректно')
 
-    @person_age.setter
+    @property  # getter
+    def person_age(self):
+        return self.__age
+
+    @person_age.setter  # setter
     def person_age(self, age):
         if 0 < age < 120:
             self.__age = age
@@ -29,8 +29,8 @@ class Person:
             print('Возраст некорректный')
 
     @classmethod
-    def fromBirthYear(cls, name, year_of_birth):
-        age = date.today().year - year_of_birth
+    def from_birth_year(cls, name, year):
+        age = date.today().year - year
         return cls(name, age)
 
     def display(self):
@@ -40,9 +40,9 @@ class Person:
 if __name__ == '__main__':
     person = Person('Иван', "19")
     print(person.display())
-    person1 = Person.fromBirthYear('Николай', 2000)
+    person1 = Person.from_birth_year('Николай', 2000)
     print(person1.display())
-    person2 = Person.fromBirthYear('Вася', 1985)
+    person2 = Person.from_birth_year('Вася', 1985)
     print(person2.display())
     print('-------------')
     print(date.today())

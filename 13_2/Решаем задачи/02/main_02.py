@@ -3,12 +3,12 @@ from datetime import date
 
 class Person:
     def __init__(self, name, age):
-        self.name = name
+        self.name = name.title()
         self.age = age
 
     @classmethod
-    def fromBirthYear(cls, name, year_of_birth):
-        age = date.today().year - year_of_birth
+    def from_birth_year(cls, name, year):
+        age = date.today().year - year
         return cls(name, age)
 
     def display(self):
@@ -16,11 +16,11 @@ class Person:
 
 
 if __name__ == '__main__':
-    person = Person('Иван', 19)
+    person = Person('иван', 19)
     print(person.display())
-    person1 = Person.fromBirthYear('Николай', 2000)
+    person1 = Person.from_birth_year('Николай', 2000)
     print(person1.display())
-    person2 = Person.fromBirthYear('Иисус', 0)
+    person2 = Person.from_birth_year('Иисус', 0)
     print(person2.display())
     print('-------------')
     print(date.today())
