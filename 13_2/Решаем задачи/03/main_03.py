@@ -37,24 +37,25 @@ class Person:
         return f'Это {self.__name}, ему {self.__age} лет.'
 
 
-person = Person('Иван', "19")
-print(person.display())
-person1 = Person.fromBirthYear('Николай', 2000)
-print(person1.display())
-person2 = Person.fromBirthYear('Вася', 1985)
-print(person2.display())
-print('-------------')
-print(date.today())
-print(date.today().year)
-print('-------------')
-print(person.person_name, person.person_age)
-print(person1.person_name, person1.person_age)
-print(person2.person_name, person2.person_age)
-print('-------------')
-person.person_name = '2_Имя_Иисус'  # Имя некорректно
-person.person_age = 0  # Возраст некорректный
-person1.person_name = 123  # Имя некорректно
-print('-------------')
-print(person.person_name, person.person_age)
-print(person1.person_name, person1.person_age)
-print(person2.person_name, person2.person_age)
+if __name__ == '__main__':
+    person = Person('Иван', "19")
+    print(person.display())
+    person1 = Person.fromBirthYear('Николай', 2000)
+    print(person1.display())
+    person2 = Person.fromBirthYear('Вася', 1985)
+    print(person2.display())
+    print('-------------')
+    print(date.today())
+    print(date.today().year)
+    print('-------------')
+    print(person.person_name, person.person_age)
+    print(person1.person_name, person1.person_age)
+    print(person2.person_name, person2.person_age)
+    print('-------------')
+    person.person_name = '2_Имя_Иисус'  # Имя некорректно
+    person.person_age = 0  # Возраст некорректный
+    person1.person_name = 123  # Имя некорректно
+    print('-------------')
+    print(person.person_name, person.person_age)
+    print(person1.person_name, person1.person_age)
+    print(person2.person_name, person2.person_age)

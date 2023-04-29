@@ -30,14 +30,15 @@ class Rectangle:
                f'Площадь: {self.area()}'
 
 
-r1 = Rectangle(7, 8)
-r2 = Rectangle(10, 20)
-# print(f'Ширина: {r1.width}\nДлина: {r1.length}')
-# print('Периметр:', Rectangle.perimeter(r1))
-# print('Площадь:', Rectangle.area(r1))
-Rectangle.display_print(r1)
-Rectangle.display_print(r2)
-print("--------------")
-print(r1.display_return())
-print(r2.display_return())
-print('Всего =', Rectangle.number)
+if __name__ == '__main__':
+    r1 = Rectangle(7, 8)
+    r2 = Rectangle(10, 20)
+    # print(f'Ширина: {r1.width}\nДлина: {r1.length}')
+    # print('Периметр:', Rectangle.perimeter(r1))
+    # print('Площадь:', Rectangle.area(r1))
+    Rectangle.display_print(r1)
+    Rectangle.display_print(r2)
+    print("--------------")
+    print(r1.display_return())
+    print(r2.display_return())
+    print('Всего =', Rectangle.number)
